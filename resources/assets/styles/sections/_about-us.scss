@@ -1,0 +1,35 @@
+.about-us {
+  background-color: map-get($colors, color-1);
+  &__wrapper {
+    display: grid;
+    grid-template-columns: minmax(auto, 732px) minmax(500px, 1fr);
+  }
+  &__img {
+    img {
+
+    }
+  }
+  &__text {
+    background-color: map-get($colors, color-3);
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 118px;
+  }
+  &__title {
+    @include h2;
+    color: map-get($colors, color-2);
+    margin-bottom: 24px;
+  }
+  &__description {
+    @include body;
+    color: map-get($colors, color-2);
+    max-width: 500px;
+    p {
+      &:not(:last-of-type) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+}

@@ -23,9 +23,19 @@ function register_acf_block_types() {
 
 	acf_register_block( array(
 		'name'            => 'about-us',
-		'title'           => __( 'Hero main' ),
-		'description'     => __( 'Hero main section' ),
+		'title'           => __( 'About us' ),
+		'description'     => __( 'About us section' ),
 		'render_template' => 'inc/templates/blocks/about-us.php',
+		'category'        => 'formatting',
+		'icon'            => 'admin-comments',
+		'keywords'        => array( 'testimonial', 'quote' ),
+	) );
+
+	acf_register_block( array(
+		'name'            => 'numbers',
+		'title'           => __( 'Numbers' ),
+		'description'     => __( 'Numbers section' ),
+		'render_template' => 'inc/templates/blocks/numbers.php',
 		'category'        => 'formatting',
 		'icon'            => 'admin-comments',
 		'keywords'        => array( 'testimonial', 'quote' ),
