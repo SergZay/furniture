@@ -24,18 +24,53 @@ $lora: 'Lora', serif;
 
 @mixin h2 {
   font-family: $lora;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 48px;
   line-height: 56px;
 }
 
 @mixin h3 {
   font-family: $lora;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
 }
 
 @mixin body {
   font-family: $lora;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin button {
+  font-family: $lora;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+}
+
+@mixin caption {
+  font-family: $lora;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+p {
+  @include body;
 }
