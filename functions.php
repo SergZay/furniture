@@ -1,5 +1,9 @@
 <?php
+require_once 'inc/StyleScript.php';
 
+register_nav_menus( array(
+	'main_menu'   => __( 'Main menu', 'furniture' ),
+) );
 
 add_theme_support( 'menus' );
 add_theme_support( 'title-tag' );
@@ -7,24 +11,25 @@ add_theme_support( 'title-tag' );
 // register blocks for Gutenberg with acf
 function register_acf_block_types() {
 
-	$acf_blocks = array(
-		'hero' => [ 'block-contact' ],
-	);
+	acf_register_block( array(
+		'name'            => 'hero-main',
+		'title'           => __( 'Hero main' ),
+		'description'     => __( 'Hero main section' ),
+		'render_template' => 'inc/templates/blocks/hero-main.php',
+		'category'        => 'formatting',
+		'icon'            => 'admin-comments',
+		'keywords'        => array( 'testimonial', 'quote' ),
+	) );
 
-	foreach ( $acf_blocks as $key => $block ) {
-		foreach ( $block as $slug ) {
-			acf_register_block_type( array(
-				'name'            => "{$key}-{$slug}",
-				'title'           => __( "{$key} {$slug} section" ),
-				'description'     => __( "{$slug} section for {$key} page" ),
-				'render_template' => "inc/templates/blocks/{$key}/{$key}-{$slug}.php",
-				'category'        => "formatting",
-				'icon'            => "admin-comments",
-				'keywords'        => array( "{$slug}, {$key}" ),
-				'example'         => array(),
-			) );
-		}
-	}
+	acf_register_block( array(
+		'name'            => 'about-us',
+		'title'           => __( 'Hero main' ),
+		'description'     => __( 'Hero main section' ),
+		'render_template' => 'inc/templates/blocks/about-us.php',
+		'category'        => 'formatting',
+		'icon'            => 'admin-comments',
+		'keywords'        => array( 'testimonial', 'quote' ),
+	) );
 }
 
 if ( function_exists( 'acf_register_block_type' ) ) {

@@ -1,0 +1,30 @@
+.hero-main {
+  background-image: url('../../images/bg-hero.jpg');
+  background-size: cover;
+
+  &__wrapper {
+    background-color: map-get($colors, color-4);
+    max-width: 732px;
+    width: 100%;
+    padding: 0 100px 100px 100px;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__title {
+    @include h1;
+    color: map-get($colors, color-2);
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    @include body;
+    color: map-get($colors, color-2);
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+  }
+}
