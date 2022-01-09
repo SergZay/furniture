@@ -40,6 +40,16 @@ function register_acf_block_types() {
 		'icon'            => 'admin-comments',
 		'keywords'        => array( 'testimonial', 'quote' ),
 	) );
+
+	acf_register_block( array(
+		'name'            => 'features',
+		'title'           => __( 'Features' ),
+		'description'     => __( 'Features section' ),
+		'render_template' => 'inc/templates/blocks/features.php',
+		'category'        => 'formatting',
+		'icon'            => 'admin-comments',
+		'keywords'        => array( 'testimonial', 'quote' ),
+	) );
 }
 
 if ( function_exists( 'acf_register_block_type' ) ) {
