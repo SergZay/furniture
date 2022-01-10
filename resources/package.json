@@ -59,6 +59,7 @@
     "webpack-hot-middleware": "^2.24.3"
   },
   "dependencies": {
-    "copy-webpack-plugin": "^6.2.1"
+    "copy-webpack-plugin": "^6.2.1",
+    "swiper": "^7.4.1"
   }
 }

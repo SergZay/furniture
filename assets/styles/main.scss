@@ -2,9 +2,15 @@
 @import "additional/typography";
 @import "additional/base";
 
+@import 'node_modules/swiper/swiper';
+@import 'node_modules/swiper/swiper-bundle';
+
 @import "partials/header";
+@import "partials/footer";
 @import "sections/hero-main";
 @import "sections/about-us";
 @import "sections/numbers";
 @import "sections/features";
 @import "sections/projects";
+@import "sections/testimonials";
+@import "sections/contact-us";

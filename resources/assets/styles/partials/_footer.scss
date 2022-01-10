@@ -1,0 +1,27 @@
+.footer {
+  background-color: map-get($colors, color-2);
+  padding: 32px 0 40px;
+
+  &__wrapper {
+    display: flex;
+    //align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    &:nth-child(2) {
+      margin: 0 164px;
+    }
+  }
+
+  &__item-title {
+    @include body;
+    color: map-get($colors, color-6);
+    margin-bottom: 6px;
+  }
+
+  &__item-text {
+    @include body;
+    color: map-get($colors, color-4);
+  }
+}

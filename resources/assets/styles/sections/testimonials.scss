@@ -1,0 +1,106 @@
+.testimonials {
+  background-color: map-get($colors, color-2);
+  padding: 120px 0 170px;
+
+  &__title {
+    @include h2;
+    color: map-get($colors, color-4);
+    margin-bottom: 32px;
+  }
+  
+  &__swiper-wrapper {
+    position: relative;
+    max-width: 810px;
+    width: auto;
+    //padding: 0 30px;
+  }
+
+  &__swiper {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    //position: relative;
+    //padding: 0 60px;
+  }
+
+  &__swiper-wrapper {
+  }
+
+  &__swiper-slide {
+    background-color: map-get($colors, color-5);
+    padding: 60px 32px;
+    //max-width: 720px;
+  }
+
+  &__swiper-button-prev,
+  &__swiper-button-next {
+    &:after {
+      content: none;
+    }
+  }
+
+  &__swiper-pagination {
+    bottom: -20px !important;
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 3px;
+      background-color: map-get($colors, color-1);
+      opacity: .25;
+      border-radius: 0;
+    }
+    .swiper-pagination-bullet-active {
+      width: 40px;
+      opacity: 1;
+    }
+  }
+
+
+  &__description {
+    @include body;
+    color: map-get($colors, color-4);
+    margin-bottom: 24px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    margin-right: 12px;
+
+    img {
+      //width: 100%;
+    }
+  }
+
+  &__text {
+
+  }
+
+  &__name {
+    @include h3;
+    color: map-get($colors, color-4);
+  }
+
+  &__position {
+    @include body;
+    color: map-get($colors, color-4);
+  }
+
+  &__swiper-paination {
+  }
+
+  &__swiper-button-prev {
+  }
+
+  &__swiper-button-next {
+  }
+
+  &__swiper-scrollbar {
+  }
+}

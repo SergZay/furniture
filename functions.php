@@ -78,6 +78,26 @@ function register_acf_block_types() {
 		'icon'            => 'admin-comments',
 		'keywords'        => array( 'testimonial', 'quote' ),
 	) );
+
+	acf_register_block( array(
+		'name'            => 'testimonials',
+		'title'           => __( 'Testimonials' ),
+		'description'     => __( 'Testimonials section' ),
+		'render_template' => 'inc/templates/blocks/testimonials.php',
+		'category'        => 'formatting',
+		'icon'            => 'admin-comments',
+		'keywords'        => array( 'testimonial', 'quote' ),
+	) );
+
+	acf_register_block( array(
+		'name'            => 'contact-us',
+		'title'           => __( 'Contact us' ),
+		'description'     => __( 'Contact us section' ),
+		'render_template' => 'inc/templates/blocks/contact-us.php',
+		'category'        => 'formatting',
+		'icon'            => 'admin-comments',
+		'keywords'        => array( 'testimonial', 'quote' ),
+	) );
 }
 
 if ( function_exists( 'acf_register_block_type' ) ) {
