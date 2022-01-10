@@ -1,5 +1,6 @@
 <?php
 require_once 'inc/StyleScript.php';
+require_once 'inc/CPT.php';
 
 register_nav_menus( array(
 	'main_menu'   => __( 'Main menu', 'furniture' ),
@@ -7,6 +8,23 @@ register_nav_menus( array(
 
 add_theme_support( 'menus' );
 add_theme_support( 'title-tag' );
+add_theme_support( 'post-thumbnails' );
+
+$projects = new CPT( 'project', array(
+	'post_type_name' => 'project',
+	'singular'       => 'Project',
+	'plural'         => 'Project',
+	'slug'           => 'project',
+	'show_in_rest'   => true,
+	'supports'       => array( 'title', 'editor', 'thumbnail', 'comments' )
+) );
+
+$projects->register_taxonomy( 'project_type', array(
+	'taxonomy_name' => 'project_type',
+	'singular'      => 'Project Type',
+	'plural'        => 'Project Type',
+	'slug'          => 'project_type'
+) );
 
 // register blocks for Gutenberg with acf
 function register_acf_block_types() {
@@ -46,6 +64,16 @@ function register_acf_block_types() {
 		'title'           => __( 'Features' ),
 		'description'     => __( 'Features section' ),
 		'render_template' => 'inc/templates/blocks/features.php',
+		'category'        => 'formatting',
+		'icon'            => 'admin-comments',
+		'keywords'        => array( 'testimonial', 'quote' ),
+	) );
+
+	acf_register_block( array(
+		'name'            => 'projects',
+		'title'           => __( 'Projects' ),
+		'description'     => __( 'Projects section' ),
+		'render_template' => 'inc/templates/blocks/projects.php',
 		'category'        => 'formatting',
 		'icon'            => 'admin-comments',
 		'keywords'        => array( 'testimonial', 'quote' ),

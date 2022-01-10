@@ -1,0 +1,91 @@
+.projects {
+  background-color: map-get($colors, color-4);
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: minmax(auto, 732px) minmax(500px, 1fr);
+  }
+
+  &__main-item {
+    background-color: map-get($colors, color-1);
+    padding: 100px;
+  }
+
+  &__title {
+    @include h2;
+    color: map-get($colors, color-2);
+    margin-bottom: 32px;
+  }
+
+  &__main-item-wrapper {
+  }
+
+  &__main-item-img {
+    img {
+      height: 328px;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__main-item-text {
+    background-color: map-get($colors, color-2);
+    padding: 24px 24px 32px;
+  }
+
+  &__main-item-title {
+    @include h3;
+    color: map-get($colors, color-4);
+    margin-bottom: 12px;
+  }
+
+  &__main-item-description {
+    @include body;
+    color: map-get($colors, color-4);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 130px;
+  }
+
+  &__item {
+    max-width: 750px;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 24px;
+  }
+
+  &__item-img {
+    img {
+      height: 100%;
+      width: 300px;
+      object-fit: cover;
+    }
+  }
+
+  &__item-text {
+    max-width: 450px;
+    width: 100%;
+    background-color: map-get($colors, color-2);
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__item-title {
+    @include h3;
+    color: map-get($colors, color-4);
+    margin-bottom: 12px;
+  }
+
+  &__item-description {
+    @include body;
+    color: map-get($colors, color-4);
+  }
+}
